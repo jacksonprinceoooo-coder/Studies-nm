@@ -1,0 +1,248 @@
+/* General */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #0077cc, #005fa3);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.4s, box-shadow 0.3s;
+}
+
+header.sticky {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+header h1 { margin: 0; }
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+nav ul li { display: inline; margin: 0 15px; }
+
+nav ul li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active { border-bottom: 2px solid #ffda44; }
+
+#darkModeToggle {
+  margin-top: 15px;
+  padding: 8px 14px;
+  border: none;
+  background: white;
+  color: #0077cc;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Hero */
+#hero {
+  background: url('https://picsum.photos/1200/500?tech') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+#hero .hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+#hero h2 { font-size: 2.5em; }
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 15px;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  background: white;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: background-color 0.4s;
+}
+
+h2 { color: #0077cc; margin-bottom: 20px; }
+
+/* Cards */
+.card-container { display: flex; gap: 20px; flex-wrap: wrap; }
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  background: #f4faff;
+  border-left: 4px solid #0077cc;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Certifications */
+.cert-img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 15px;
+  transition: transform 0.3s;
+}
+
+.cert-img:hover { transform: scale(1.05); }
+
+/* Resume */
+.resume-header {
+  background: #eef6ff;
+  padding: 15px;
+  border-left: 4px solid #0077cc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.resume-buttons { margin-top: 15px; }
+
+.btn {
+  display: inline-block;
+  margin: 8px 5px;
+  padding: 12px 20px;
+  background: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  background: #005fa3;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.resume-frame {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Contact */
+form input, form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+form button:hover { background: #005fa3; }
+
+.form-message {
+  display: none;
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border-radius: 5px;
+  background-color: #50e3c2;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 1s;
+}
+
+.form-message.show { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+  border-top: 3px solid #0077cc;
+  transition: background-color 0.4s;
+}
+
+/* Back to Top */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.4s, background 0.3s;
+}
+
+#backToTop.show { opacity: 1; }
+
+#backToTop:hover { background: #005fa3; }
+
+/* Dark Mode */
+body.dark { background: #1e1e1e; color: #f4f4f4; }
+body.dark section { background: #2c2c2c; }
+body.dark header { background: #111; }
+body.dark nav ul li a { color: #f4f4f4; }
+body.dark .card { background: #333; }
+body.dark footer { background: #111; }
